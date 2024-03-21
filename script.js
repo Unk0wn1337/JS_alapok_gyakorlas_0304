@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$("load", function () {
    main();
 });
 
@@ -16,20 +16,22 @@ function main(){
 
 
 function elemekElerese1() {
-    const ELEM = document.querySelectorAll("section h2")[0];
-    console.log(ELEM.innerHTML);
+    const ELEM = $("section h2")
+    console.log("1. Feladat:"+ELEM.html());
+   
+
 }
 function elemekElerese2() {
-    const ELEM = document.getElementById("ide");
-    ELEM.innerHTML += ("<p>Jo reggelt!</p>");
+    const ELEM = $("#ide");
+    ELEM.html("<p>Jo reggelt!</p>");
 }
 function elemekElerese3() {
-    const ELEM = document.querySelector(".ide");
-    ELEM.innerHTML += ("<p>Jo reggelt!</p>");
+    const ELEM = $(".ide");
+    ELEM.html("<p>Jo reggelt!</p>");
 }
 
 function elemekElerese4() {
-    const LISTA_ELEMENT = document.querySelector(".lista");
+    const LISTA_ELEMENT = $(".lista");
     const LISTA = [];
     for (let index = 0; index < 5; index++) {
         let tizEsHarmincKozottVeletlen = Math.floor(Math.random() * (30-10)+ 10);
